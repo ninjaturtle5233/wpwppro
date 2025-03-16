@@ -1,0 +1,196 @@
+/* 기본 스타일 */
+:root {
+    --primary-color: #4169e1;
+    --primary-light: #e6f0ff;
+    --warning-color: #ffc107;
+    --warning-light: #fff8e1;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --danger-color: #dc3545;
+    --border-radius: 0.25rem;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* 카드 스타일 */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--primary-light) !important;
+}
+
+.bg-warning-subtle {
+    background-color: var(--warning-light) !important;
+}
+
+.bg-info-subtle {
+    background-color: #e3f2fd !important;
+}
+
+/* 폼 스타일 */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(65, 105, 225, 0.25);
+}
+
+/* 버튼 스타일 */
+.btn {
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #3050c5;
+    border-color: #3050c5;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+/* 테이블 스타일 */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    border-top: none;
+}
+
+.table td, .table th {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* 결과 표시 영역 스타일 */
+#adjustmentResult {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#goldSaleRatioBox .card-body p {
+    margin-bottom: 8px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .card-header {
+        padding: 10px 15px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+/* 특정 요소 스타일 */
+#investor1Ratio, #investor2Ratio {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#totalInvestment, #totalIncome, #netIncome, #totalGoldHolding {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#totalWithdrawal {
+    font-weight: 600;
+    color: var(--danger-color);
+}
+
+/* 데이터 관리 버튼 영역 */
+.d-flex.justify-content-between {
+    gap: 10px;
+}
+
+/* 입력 필드 포커스 효과 */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(65, 105, 225, 0.25);
+}
